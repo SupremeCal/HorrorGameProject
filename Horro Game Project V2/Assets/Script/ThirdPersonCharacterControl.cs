@@ -16,6 +16,6 @@ public class ThirdPersonCharacterControl : MonoBehaviour
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
         Vector3 playerMovement = new Vector3(hor, 0f, ver) * Speed * Time.deltaTime;
-        
+        transform.Translate(playerMovement, Space.Self);
     }
 }
